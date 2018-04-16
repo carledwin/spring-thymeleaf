@@ -1,0 +1,44 @@
+<form action="#" method="get" th:action="@{/produtos}" th:object="${produto}">
+	<div class="panel panel-default">
+		<div class="panel-heading" th:text="#{produto-lista.form.alteracao}">
+			Alteração do Produto
+		</div>
+		
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label class="control-label" for="produtoSelecionado-id"
+							th:text="#{produto-lista.form.codigo}">Código: </label>
+						<input class="form-control" readonly id="produtoSelecionado-id" />
+					</div>
+				</div>
+				
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label class="control-label" for="produtoSelecionado-nome"
+							th:text="#{produto-lista.form.nome}">Nome: </label>
+						<input class="form-control" id="produtoSelecionado-nome" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label class="control-label" for="produtoSelecionado-preco"
+						th:text="#{produto-lista.form.preco}">Preço: </label>
+					<input class="form-control" id="produtoSelecionado-preco" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-sm-12" style="text-align:center;">
+				<button id="btn-alterar-produto" class="btn btn-default">
+					<span></span>
+					Alterar
+				</button>
+			</div>
+		</div>	
+		
+	</div>
+</form>			

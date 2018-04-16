@@ -1,0 +1,26 @@
+<table id="grid-produto" class="table table-bordered">
+<thead>
+	<tr>
+		<th style="text-align:center" th:text="#{produto-lista.tabela.titulo.detalhe}">Detalhe</th>
+		<th style="text-align:center" th:text="#{produto-lista.tabela.titulo.codigo}">Código</th>
+		<th style="text-align:center" th:text="#{produto-lista.tabela.titulo.nome}">Nome</th>
+		<th style="text-align:center" th:text="#{produto-lista.tabela.titulo.preco}">Preço</th>
+	</tr>
+</thead>
+
+<tbody th:remove="${#arrays.isEmpty(produtos)} ? all : 'all-but-first'">
+	<tr th:each="produto: ${produtos}" onclick="editar(this);">
+		
+		<td style="text-align:center">
+			<a href="#" onclick="consultarDetalhe(this);">
+				<span class="fa fa-search"></span>
+			</a>
+		</td>
+		
+		<td style="text-align:center" th:text="${produto.id}">1</td>
+		<td style="text-align:center" th:text="${produto.nome}">Novo Kindle (Preto) com tela sensível ao toque e Wi-Fi , 8a. Geração</td>
+		<td style="text-align:center" th:text="'R$' + ${#numbers.formatDecimal(produto.preco, 3, 'POINT', 2, 'COMMA')}">R$299,00</td>
+		</tr>
+		
+	</tbody>
+</table>

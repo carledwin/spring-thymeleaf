@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+	
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"/>
+	
+	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+	
+	    <link href="../../resources/css/style.css" th:href="@{/resources/css/style.css}" rel="stylesheet"/>
+	
+	    <title th:text="#{sistema.titulo}">Carledwinj - Thymeleaf</title>
+	</head>
+	
+	<body>
+		
+		<th:block th:replace="/_menu-produto.html"></th:block>
+		
+		<section class="container">
+			
+			<h3 class="page-header" th:text="#{produto-lista.pagina.titulo}">
+				Página de produtos
+			</h3>
+			<th:block th:replace="/_conteudo-produto.html"></th:block>
+			<th:block th:replace="/_filtro-produto.html"></th:block>			
+			<th:block th:replace="/_grid-produto.html"></th:block>
+			
+			<div id="detalhe-lista">
+				<th:block th:replace="/_detalhe-lista.html"></th:block>
+			</div>
+			
+		</section>
+		
+		<div class="container">
+	    	<hr />
+	    	
+		    <footer>
+		    	<h4>Thymeleaf</h4>
+			</footer>	
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script th:src="@{/resources/js/script.js}"></script>		
+	</body>
+</html>

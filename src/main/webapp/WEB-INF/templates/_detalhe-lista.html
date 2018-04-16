@@ -1,0 +1,16 @@
+<table id="grid-detalhe" class="table table-striped table-bordered">
+	<thead>
+		<tr>
+			<th style="text-align:center" th:text="#{produto-lista.tabela.titulo.detalhe}">Detalhe</th>
+			<th style="text-align:center" th:text="#{produto-lista.tabela.titulo.descricao}">Descri&ccedil;&atilde;o</th>
+		</tr>
+	</thead>
+	
+	<tbody th:remove="${#arrays.isEmpty(detalhes)} ? all : 'all-but-first'">
+		<tr th:each="detalhe: ${detalhes}">
+			
+			<td style="text-align:center" th:text="${detalhe.id}">1</td>
+			<td style="text-align:center" th:text="${detalhe.descricao}">Descrição do detalhe</td>
+		</tr>
+	</tbody>
+</table>
