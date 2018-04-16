@@ -5,13 +5,9 @@
 		<meta charset="UTF-8"/>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
 	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
-	
 	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"/>
-	
 	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
-	
 	    <link href="../../resources/css/style.css" th:href="@{/resources/css/style.css}" rel="stylesheet"/>
 	
 	    <title th:text="#{sistema.titulo}">Carledwinj - Thymeleaf</title>
@@ -26,15 +22,17 @@
 			<h3 class="page-header" th:text="#{produto-lista.pagina.titulo}">
 				Página de produtos
 			</h3>
-			<th:block th:replace="/_conteudo-produto.html"></th:block>
+			
 			<th:block th:replace="/_filtro-produto.html"></th:block>			
 			<th:block th:replace="/_grid-produto.html"></th:block>
 			
 			<div id="botoes">
-				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Alterarl</button>
+				<button id="btn-modal-alterar-produto" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-alterar-produto">Alterar</button>
+				<button id="btn-modal-exibir-detalhe" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-exibir-detalhe">Detalhe</button>
 			</div>
 			
 			<th:block th:replace="/_modal-produto.html"></th:block>
+			<th:block th:replace="/_modal-detalhe.html"></th:block>
 			
 		</section>
 		

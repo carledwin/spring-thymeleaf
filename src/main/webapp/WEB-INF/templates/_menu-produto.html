@@ -1,84 +1,34 @@
-<!DOCTYPE html>
-<html
-    xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta charset="UTF-8"/>
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
-	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
-	
-	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"/>
-	
-	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
-	
-	    <link href="../../resources/css/style.css" 
-	    	th:href="@{/resources/css/style.css}" rel="stylesheet"/>
-	
-	    <title th:text="#{sistema.titulo}">Carledwinj - Thymeleaf</title>
-	</head>
-	
-	<body>
-		<nav class="navbar navbar-default navbar-fixed-top">
-		    <div class="container">
-		        <div class="navbar-header">
-		            <button type="button" class="navbar-toggle collapsed"
-		                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-		                    aria-controls="navbar">
-		                <span class="sr-only">Toggle navigation</span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		            </button>
-		
-		            <a class="navbar-brand" href="#" th:href="@{/}">GP</a>
-		        </div>
-		        <div id="navbar" class="collapse navbar-collapse">
-		            <ul class="nav navbar-nav">
-						<li>
-							<a href="#" th:href="@{/produtos}" 
-								th:text="#{menu.produtos}">Produtos</a>
-						</li>
-		            </ul>
-		            
-		            <ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" 
-								role="button" aria-haspopup="true" aria-expanded="false">
-								Carledwinj 
-								<span class="caret"></span>
-							</a>
-							
-							<ul class="dropdown-menu">
-								<li><a href="http://www.carledwinj.wordpress.com" target="_blank">Blog</a></li>
-				                <li><a href="http://github.com/carledwin" target="_blank">Github</a></li>
-							</ul>
-						</li>
-		            </ul>
-		        </div>
-		    </div>
-		</nav>
-		
-		<section class="container">
-			<h3 class="page-header" th:text="#{produto-lista.pagina.titulo}">
-				Página de produtos
-			</h3>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
 
-			<th:block th:replace="/_filtro-produto.html"></th:block>			
-			<th:block th:replace="/_grid-produto.html"></th:block>
-			
-		</section>
-		
-		<div class="container">
-	    	<hr />
-	    	
-		    <footer>
-		    	<h4>Aula Thymeleaf e JSP</h4>
-			</footer>	
+			<a class="navbar-brand" href="#" th:href="@{/}">GP</a>
 		</div>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>		
-	</body>
-</html>
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#" th:href="@{/produtos}"
+					th:text="#{menu.produtos}">Produtos</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+					aria-expanded="false"> Carledwinj <span class="caret"></span>
+				</a>
+
+					<ul class="dropdown-menu">
+						<li><a href="http://www.carledwinj.wordpress.com"
+							target="_blank">Blog</a></li>
+						<li><a href="http://github.com/carledwin" target="_blank">Github</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</div>
+</nav>

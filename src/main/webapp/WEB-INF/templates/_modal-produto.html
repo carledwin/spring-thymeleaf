@@ -1,21 +1,66 @@
-<div id="myModal" class="modal fade" role="dialog">
+<div id="modal-alterar-produto" class="modal fade"
+	data-backdrop="static" role="dialog">
 
-  <div class="modal-dialog">
+	<div class="modal-dialog">
 
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Detalhe </h4>
-      </div>
-      <div class="modal-body">
-       <div id="detalhe-lista">
-				<th:block th:replace="/_detalhe-lista.html"></th:block>
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Detalhe</h4>
 			</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+			<div class="modal-body">
+				<div id="detalhe-lista">
+					<form action="#" method="get" th:action="@{/produtos}"
+						th:object="${produto}">
+						<div class="panel panel-default">
+							<div class="panel-heading"
+								th:text="#{produto-lista.form.alteracao}">Alteração do
+								Produto</div>
 
-  </div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label class="control-label" for="produtoSelecionado-id"
+												th:text="#{produto-lista.form.codigo}">Código: </label> <input
+												class="form-control" readonly id="produtoSelecionado-id" />
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="control-label" for="produtoSelecionado-nome"
+												th:text="#{produto-lista.form.nome}">Nome: </label> <input
+												class="form-control" id="produtoSelecionado-nome" />
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label class="control-label" for="produtoSelecionado-preco"
+												th:text="#{produto-lista.form.preco}">Preço: </label> <input
+												class="form-control" id="produtoSelecionado-preco" />
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</form>
+
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button id="btn-cancelar-alterar-produto" type="button"
+					class="btn btn-default" data-dismiss="modal">
+					<span></span>Cancelar
+				</button>
+				<button id="btn-alterar-produto" type="button"
+					class="btn btn-default">
+					<span></span>Alterar
+				</button>
+			</div>
+		</div>
+
+	</div>
 </div>
